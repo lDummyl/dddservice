@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: payment-service
+  cloud:
+    config:
+      uri: http://localhost:8081
+  main:
+    allow-bean-definition-overriding: true
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+springdoc.swagger-ui.path: /swagger-ui.html
+
