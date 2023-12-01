@@ -1,5 +1,6 @@
 package com.test.ddd.domain.wire;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.test.ddd.repo.TestRepo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -21,6 +22,7 @@ public class TestService {
 
     @Transactional
     public void extracted1(UUID id) {
+
         TestEnt testEnt1 = testRepo.findById(id).get();
         TransactionStatus status = TransactionAspectSupport.currentTransactionStatus();
         System.out.println("status = " + status);
